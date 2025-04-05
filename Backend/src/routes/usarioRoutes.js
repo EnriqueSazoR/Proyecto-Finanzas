@@ -4,7 +4,6 @@ const {crearUsuario, actualizarUsuario} = require('../controllers/usuarioControl
 
 
 // Rutas
-router.post('/CrearUsuario', crearUsuario)
 router.put('/ActualizarUsuario/:id', actualizarUsuario)
 
 

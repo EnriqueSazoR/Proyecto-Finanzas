@@ -2,8 +2,12 @@
 const express = require('express')
 const { config } = require('dotenv')
 const cors = require('cors')
-require('../src/basedatos/db')
 const usuarioRutas = require('./routes/usarioRoutes')
+const authRutas = require('./routes/authRoutes')
+const middleRutas = require('./routes/authMiddleware')
+require('../src/basedatos/db')
+
+
 
 config()
 
@@ -11,15 +15,13 @@ const app = express(); // Instancia de express
 
 // Middlewares
 app.use(express.json()); // Para manejar JSON en las solicitudes
-app.use(cors()); // Para permitir conexiones desde el frontend
+app.use(cors({origin: 'http://localhost:4200'})); // Para permitir conexiones desde el frontend
 
-// Ruta de prueba
-app.get('/api/test', (req, res ) => {
-    res.json({message: '!El servidor funciona correctamente! '})
-})
+// Rutas usuarios
+app.use('/api', middleRutas, usuarioRutas)
 
-// Usar ruta de usuarios
-app.use('/api', usuarioRutas)
+// Rutas autenticacion
+app.use('/auth', authRutas)
 
 // Definir puerto
 const port = process.env.PORT || 3000

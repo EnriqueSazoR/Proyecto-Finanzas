@@ -24,3 +24,8 @@ Estilos: Bootstrap / CSS
 Este proyecto servirá como práctica para desarrollar una aplicación full-stack utilizando Angular, Node.js y MongoDB, aplicando buenas prácticas en la arquitectura de software.
 
 # 📌 Estado: En desarrollo.
+
+# 🖥️ – Interfaces
+
+![Login](https://github.com/user-attachments/assets/2a164021-6120-49c4-89f2-4ec6df4b45a2)
+

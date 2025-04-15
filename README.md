@@ -29,10 +29,11 @@ Este proyecto servirá como práctica para desarrollar una aplicación full-stac
 
 ![Login](https://github.com/user-attachments/assets/2a164021-6120-49c4-89f2-4ec6df4b45a2)
 
+![Registro](https://github.com/user-attachments/assets/29c06c45-6cca-472a-a067-ed62ab94107d)
 
-![Registro](https://github.com/user-attachments/assets/cda515d2-6fdf-4b38-a6d5-fd0f94b12395)
+![Registrarse2](https://github.com/user-attachments/assets/fa950664-9f4c-494e-8588-d11f27eb7208)
 
 
-![Registrarse2](https://github.com/user-attachments/assets/d518422b-6f08-49b0-b25e-79933d89ffee)
+
 
 

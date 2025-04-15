@@ -1,8 +1,14 @@
-<div class="main-register">
-    <div class="card-register">
-      <h1>Registrate en Cashi</h1>
-      <img src="https://i.postimg.cc/zDk5WDpF/Save-Money-removebg-preview.png" class="left-login-img" alt="astronaut image">
-      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <main class="main-register">
+
+    <div class="left-register">
+      <h1>¡Bienvenido a Cashi<br>Adquiere el hábito del ahorro!</h1>
+      <img src="https://i.postimg.cc/zDk5WDpF/Save-Money-removebg-preview.png" class="left-register-img" alt="astronaut image">
+    </div>
+
+    <div class="right-register">
+      <div class="card-register">
+        <h1>Crea Tu Cuenta</h1>
         <div class="textfield">
           <label>Nombre de Usuario</label>
           <input
@@ -67,12 +73,17 @@
         >
           {{ loading ? 'Registrando...' : 'Registrarse' }}
         </button>
-      </form>
-      <div *ngIf="successMessage" class="success-text">
-        {{ successMessage }}
-      </div>
-      <div *ngIf="errorMessage" class="error-text">
-        {{ errorMessage }}
+        
+        <div *ngIf="successMessage" class="success-text">
+          {{ successMessage }}
+        </div>
+        <div *ngIf="errorMessage" class="error-text">
+          {{ errorMessage }}
+        </div>
+
       </div>
     </div>
-  </div>
+
+  </main>
+  
+</form>

@@ -1,0 +1,78 @@
+<div class="main-register">
+    <div class="card-register">
+      <h1>Registrate en Cashi</h1>
+      <img src="https://i.postimg.cc/zDk5WDpF/Save-Money-removebg-preview.png" class="left-login-img" alt="astronaut image">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="textfield">
+          <label>Nombre de Usuario</label>
+          <input
+            type="text"
+            formControlName="Nombre"
+            [class.invalid]="f['Nombre'].invalid && f['Nombre'].touched"
+          />
+          <div
+            *ngIf="f['Nombre'].invalid && f['Nombre'].touched"
+            class="error-text"
+          >
+            <span *ngIf="f['Nombre'].errors?.['required']">
+              El nombre de usuario es requerido.
+            </span>
+            <span *ngIf="f['Nombre'].errors?.['minlength']">
+              Mínimo 3 caracteres.
+            </span>
+          </div>
+        </div>
+        <div class="textfield">
+          <label>Correo</label>
+          <input
+            type="email"
+            formControlName="Email"
+            [class.invalid]="f['Email'].invalid && f['Email'].touched"
+          />
+          <div
+            *ngIf="f['Email'].invalid && f['Email'].touched"
+            class="error-text"
+          >
+            <span *ngIf="f['Email'].errors?.['required']">
+              El correo es requerido.
+            </span>
+            <span *ngIf="f['Email'].errors?.['email']">
+              Ingresa un correo válido.
+            </span>
+          </div>
+        </div>
+        <div class="textfield">
+          <label>Contraseña</label>
+          <input
+            type="password"
+            formControlName="Password"
+            [class.invalid]="f['Password'].invalid && f['Password'].touched"
+          />
+          <div
+            *ngIf="f['Password'].invalid && f['Password'].touched"
+            class="error-text"
+          >
+            <span *ngIf="f['Password'].errors?.['required']">
+              La contraseña es requerida.
+            </span>
+            <span *ngIf="f['Password'].errors?.['minlength']">
+              Mínimo 6 caracteres.
+            </span>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="btn-register"
+          [disabled]="loading || registerForm.invalid"
+        >
+          {{ loading ? 'Registrando...' : 'Registrarse' }}
+        </button>
+      </form>
+      <div *ngIf="successMessage" class="success-text">
+        {{ successMessage }}
+      </div>
+      <div *ngIf="errorMessage" class="error-text">
+        {{ errorMessage }}
+      </div>
+    </div>
+  </div>

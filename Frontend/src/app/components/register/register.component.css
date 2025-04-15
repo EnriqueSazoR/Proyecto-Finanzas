@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.main-register {
+  width: 100vw;
+  height: 100vh;
+  background: #201b2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-register {
+  width: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px; 
+  background: #2f2841;
+  border-radius: 15px; 
+  box-shadow: 0px 5px 20px #00000056;
+}
+
+.card-register > h1 {
+  color: #00ff88;
+  font-weight: 900;
+  margin: 10px 0; 
+  font-size: 30px; 
+}
+
+.textfield {
+  width: 110%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.textfield > input {
+  width: 100%;
+  border: none;
+  border-radius: 8px; 
+  padding: 15px; 
+  background: #514869;
+  color: #f0ffffde;
+  font-family: 16px;
+  font-size: 18px;
+  box-shadow: 0px 5px 20px #00000056; /* Sombra más sutil */
+  outline: none;
+  box-sizing: border-box;
+}
+
+.textfield > input::placeholder {
+  color: #f0ffff94;
+}
+
+.textfield > label {
+  color: #f0ffffde;
+  margin-bottom: 8px; /* Menos separación entre label e input */
+  font-size: 20px; /* Tamaño de fuente más pequeño */
+}
+
+.btn-register {
+  width: 100%;
+  padding: 12px 0; 
+  margin: 20px 0; 
+  border: none;
+  text-transform: uppercase;
+  border-radius: 6px; 
+  outline: none;
+  font-weight: 800;
+  font-size: 14px; 
+  letter-spacing: 2px;
+  color: #2b134b;
+  background: #00ff88;
+  cursor: pointer;
+  box-shadow: 0px 5px 20px -8px #00ff8052; 
+}
+
+.error-text {
+  color: #ff5555;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.success-text {
+  color: #00ff88;
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.textfield > input.invalid {
+  border: 2px solid #ff5555;
+}
+
+@media (max-width: 400px) {
+    .card-register {
+      width: 90%;
+      padding: 15px 20px;
+    }
+  }
